@@ -1,0 +1,673 @@
+Artificial intelligence (AI) is a field of computer science focused on
+building systems that perform tasks commonly associated with human
+intelligence, such as reasoning, language understanding, perception,
+planning, and decision-making.
+
+Examples of artificial intelligence include virtual assistants,
+recommendation systems, fraud detection, medical image analysis,
+translation tools, route planning, and systems that help detect spam.
+
+Machine learning (ML) is a subset of artificial intelligence in which
+computers learn patterns from examples or data and use those patterns to
+make predictions or decisions on new inputs.
+
+Deep learning is a subset of machine learning that uses neural networks
+with many layers to learn complex patterns. It is widely used in image
+recognition, speech processing, language models, and generative AI.
+
+Traditional rule-based software follows rules explicitly written by a
+programmer. Machine learning instead learns patterns from data, although
+ML systems still require human choices about data, objectives, model
+design, and evaluation.
+
+A dataset is a collection of related examples used for analysis or model
+development. In machine learning, a dataset commonly contains rows
+representing examples and columns representing features or target
+values.
+
+A sample or instance is one individual example in a dataset, such as one
+customer, one image, one transaction, or one house listing.
+
+A feature is an input variable used by a machine learning model to make
+a prediction. Examples of features for house-price prediction include
+floor area, location, number of bedrooms, and building age.
+
+A target or label is the value a supervised learning model is trained to
+predict. For example, the target in an email spam classifier could be
+spam or not spam.
+
+A model is a mathematical or computational system that learns a
+relationship from data and uses that relationship to generate
+predictions, classifications, scores, or other outputs.
+
+The training process adjusts a model’s parameters using training data to
+reduce a chosen loss or error measure. Training does not by itself prove
+that a model will perform well on new data.
+
+Inference is the process of using a trained model to produce an output
+for new input data. For example, a deployed model performs inference
+when it predicts whether a new email is spam.
+
+Supervised learning uses examples that contain input features and known
+target labels. Common supervised tasks include classification, which
+predicts categories, and regression, which predicts numerical values.
+
+Unsupervised learning works with data without supplied target labels and
+aims to discover structure, groups, or useful representations.
+Clustering and dimensionality reduction are common unsupervised tasks.
+
+Reinforcement learning trains an agent to choose actions by interacting
+with an environment and receiving rewards or penalties. The goal is to
+learn a policy that maximizes long-term cumulative reward.
+
+Semi-supervised learning uses a small amount of labelled data together
+with a larger amount of unlabelled data. It can be useful when labels
+are expensive or time-consuming to obtain.
+
+Self-supervised learning creates training signals from the data itself,
+such as predicting masked words or missing parts of an input. It is
+widely used to pretrain language and vision models.
+
+Classification predicts a discrete category or class, such as spam
+versus not spam, benign versus malignant, or one animal species versus
+another.
+
+Binary classification predicts one of two classes. Examples include
+approving or rejecting a transaction and classifying a message as spam
+or not spam.
+
+Multiclass classification predicts one class from more than two possible
+classes, such as classifying an image as a cat, dog, horse, or bird.
+
+Multilabel classification allows one example to have several labels at
+once. For example, a news article may be labelled both politics and
+economics.
+
+Regression predicts a numerical value, often a continuous quantity such
+as house price, delivery time, temperature, or monthly sales.
+
+Clustering groups examples based on similarity without using predefined
+class labels. It can be used for customer segmentation, grouping
+documents, or exploring patterns in scientific data.
+
+Dimensionality reduction represents data using fewer variables while
+attempting to preserve important structure. It can help with
+visualization, noise reduction, and reducing computational cost.
+
+Anomaly detection identifies examples that differ substantially from
+typical patterns. Applications include unusual financial transactions,
+equipment faults, network intrusions, and sensor failures.
+
+A training set is the portion of data used to fit a model’s parameters.
+A model learns patterns from this set, so the set should represent the
+kinds of examples expected in real use.
+
+A validation set is used during model development to compare candidate
+models, tune hyperparameters, and make design choices without using the
+final test set repeatedly.
+
+A test set is held aside to estimate how well the final model performs
+on unseen data. It should not be used repeatedly to choose model
+settings, because that can make the estimate overly optimistic.
+
+A train-validation-test split separates data for fitting, model
+selection, and final evaluation. The exact proportions depend on dataset
+size, task, and evaluation design; there is no single split that is best
+for every project.
+
+Data leakage occurs when information unavailable at prediction time
+accidentally enters training or evaluation. Leakage can produce
+misleadingly high scores and poor performance after deployment.
+
+For time-dependent data, a random split can leak future information into
+training. A chronological split is often more appropriate: train on
+earlier observations and evaluate on later observations.
+
+Stratified splitting preserves approximate class proportions across data
+partitions. It is often useful for classification when some classes are
+uncommon.
+
+Cross-validation repeatedly trains and evaluates a model on different
+partitions of the training data. In k-fold cross-validation, the data is
+divided into k folds and each fold is used as validation once.
+
+A baseline model is a simple reference system used to judge whether a
+more complex approach adds value. Examples include predicting the
+majority class, predicting the training-set mean, or using a simple
+linear model.
+
+Overfitting happens when a model learns training-specific details or
+noise and performs poorly on unseen data. Signs include very strong
+training performance but substantially weaker validation performance.
+
+Underfitting happens when a model is too simple or insufficiently
+trained to capture useful patterns. It usually performs poorly on both
+training data and unseen data.
+
+The bias-variance trade-off describes a balance between errors caused by
+overly simple assumptions and errors caused by sensitivity to the
+particular training sample. Good model selection seeks strong
+generalization rather than simply minimizing training error.
+
+Generalization is a model’s ability to perform well on new examples
+drawn from the intended data distribution, rather than only on the
+examples used during training.
+
+Regularization discourages overly complex models or parameter values,
+often helping reduce overfitting. Examples include L1 regularization, L2
+regularization, dropout in neural networks, and early stopping.
+
+L1 regularization adds a penalty based on the absolute values of model
+coefficients. It can drive some coefficients to zero and may therefore
+produce sparse models.
+
+L2 regularization adds a penalty based on squared coefficient values. It
+encourages smaller coefficients and can make models less sensitive to
+individual features.
+
+Early stopping ends training when performance on a validation set stops
+improving. It can reduce overfitting and save computation, especially
+when training neural networks.
+
+A hyperparameter is a setting chosen before or during model selection
+rather than learned directly as an ordinary model parameter. Examples
+include tree depth, learning rate, number of neighbors, and
+regularization strength.
+
+Hyperparameter tuning searches for settings that perform well on
+validation data. Common methods include grid search, random search, and
+more advanced optimization approaches.
+
+Feature engineering creates, transforms, or selects input variables to
+help a model learn useful relationships. Examples include extracting day
+of week from a date, calculating ratios, and creating interaction
+features.
+
+Data preprocessing prepares raw data for modelling. Typical steps
+include handling missing values, correcting data types, removing
+duplicates, encoding categories, scaling numerical values, and checking
+for outliers.
+
+Missing data occurs when a value is absent from a dataset. Common
+approaches include removing selected rows or columns, imputing values
+with a statistic, or using a model or method designed to handle
+missingness.
+
+Mean imputation replaces missing numerical values with the mean of
+observed values. It is simple but can be affected by outliers and can
+reduce variability, so it is not always the best choice.
+
+Median imputation replaces missing numerical values with the median of
+observed values. It is often more robust than mean imputation when the
+feature contains extreme outliers.
+
+Categorical encoding converts categories into numerical representations
+that a model can use. One-hot encoding creates a separate indicator
+column for each category; ordinal encoding assigns ordered integer codes
+when an order is meaningful.
+
+One-hot encoding represents a categorical variable using binary
+indicator columns. It avoids implying a numeric order between nominal
+categories, but it can create many columns for high-cardinality
+features.
+
+Feature scaling transforms numerical features to comparable ranges. It
+is important for many distance-based and gradient-based methods, such as
+k-nearest neighbors, support vector machines, and neural networks, but
+is less essential for many tree-based models.
+
+Standardization transforms a numerical feature by subtracting its
+training-set mean and dividing by its training-set standard deviation.
+The transformed feature has approximately zero mean and unit variance on
+the data used to fit the scaler.
+
+Min-max scaling maps numerical values to a chosen range, commonly zero
+to one. It can be sensitive to extreme values because the minimum and
+maximum determine the transformation.
+
+An outlier is an observation unusually far from the rest of the data.
+Outliers may be errors, rare but valid events, or important anomalies;
+they should be investigated rather than automatically deleted.
+
+Class imbalance occurs when one class is much more common than another.
+Accuracy may be misleading in this setting, so precision, recall,
+F1-score, balanced accuracy, PR-AUC, and the confusion matrix may be
+more informative.
+
+Data augmentation creates modified training examples, such as flipping
+or cropping images or making carefully controlled text transformations.
+It can improve robustness, but transformations must preserve the correct
+label and avoid introducing unrealistic examples.
+
+Linear regression models a numerical target as a linear combination of
+input features and coefficients. It is a useful baseline for regression
+and is often valued for its interpretability.
+
+Logistic regression is commonly used for classification. It estimates
+class probabilities using a logistic function for binary classification
+or related extensions for multiple classes; despite its name, it is not
+ordinary linear regression.
+
+A decision tree makes predictions by applying a sequence of
+feature-based splits. Trees are interpretable and can model nonlinear
+relationships, but deep trees can overfit unless controlled.
+
+A random forest combines predictions from many decision trees trained
+with randomness in their data samples and feature choices. It often
+improves stability and predictive performance compared with a single
+unconstrained tree.
+
+Gradient boosting builds an ensemble of weak or simple models
+sequentially, with later models focusing on errors or residual patterns
+from earlier models. It often performs strongly on structured tabular
+data.
+
+Support vector machines seek a decision boundary with a large margin
+between classes. Kernel methods allow some SVMs to model nonlinear
+boundaries, and feature scaling is often important.
+
+K-nearest neighbors predicts using the labels or values of nearby
+training examples. It is simple, but prediction can be slow for large
+datasets and results depend on the distance metric, feature scaling, and
+choice of k.
+
+Naive Bayes is a family of probabilistic classifiers based on Bayes’
+theorem and a conditional independence assumption between features given
+the class. It is computationally efficient and often used for text
+classification.
+
+K-means clustering divides data into k clusters by repeatedly assigning
+points to the nearest centroid and updating centroids. It works best
+when the chosen distance and cluster shapes fit the data; feature
+scaling and the choice of k matter.
+
+Principal component analysis (PCA) is a dimensionality-reduction
+technique that transforms correlated numerical features into orthogonal
+components capturing decreasing amounts of variance. Scaling is often
+important when features use different units.
+
+A neural network consists of interconnected computational units arranged
+in layers. During training, it adjusts weights and biases to reduce a
+loss function and learn relationships between inputs and outputs.
+
+An activation function introduces nonlinearity into a neural network.
+Without suitable nonlinear activations, stacking ordinary linear layers
+would still represent only a linear transformation.
+
+ReLU, or rectified linear unit, returns zero for negative inputs and the
+input value for positive inputs. It is widely used in hidden layers
+because it is simple and computationally efficient.
+
+A loss function measures how poorly a model’s predictions match the
+target values according to a chosen objective. Training algorithms
+attempt to minimize the loss, but a low training loss does not guarantee
+good generalization.
+
+Gradient descent updates model parameters in a direction that reduces
+the loss, using gradients to estimate how parameters affect the
+objective. The learning rate controls the size of each update.
+
+The learning rate controls how large optimization updates are. If it is
+too high, training may be unstable; if it is too low, learning may be
+very slow or stall within a practical training budget.
+
+A batch is a group of training examples processed together in one
+optimization step. Mini-batch training is common because it balances
+computational efficiency and gradient noise.
+
+An epoch is one complete pass through the training dataset. Neural
+networks often train for multiple epochs, while validation performance
+is monitored to help avoid overfitting.
+
+Backpropagation computes gradients of a neural network’s loss with
+respect to its parameters by applying the chain rule through the
+network. An optimizer uses those gradients to update parameters.
+
+Dropout is a regularization technique for neural networks that randomly
+disables a subset of activations during training. It can reduce
+co-adaptation and help limit overfitting.
+
+A convolutional neural network (CNN) uses convolutional operations to
+learn local spatial patterns. CNNs have been widely used for image
+classification, object detection, segmentation, and other vision tasks.
+
+A recurrent neural network (RNN) processes sequential data while
+maintaining a hidden state. Basic RNNs can struggle with long-range
+dependencies, motivating architectures such as LSTMs and GRUs and, for
+many tasks, transformers.
+
+A transformer is a neural network architecture built around attention
+mechanisms that allow tokens or other elements to exchange contextual
+information. Transformers are widely used in language, vision, audio,
+and multimodal systems.
+
+Attention assigns context-dependent weights to information elements,
+allowing a model to focus on relevant parts of an input when building a
+representation. Self-attention relates elements within the same sequence
+or input.
+
+An embedding is a numerical vector representing an item such as a word,
+sentence, image, or user. Well-trained embeddings can place semantically
+similar items near one another in vector space.
+
+Natural language processing (NLP) is the area of AI concerned with
+processing human language. Tasks include classification, information
+extraction, translation, summarization, question answering, and
+sentiment analysis.
+
+Tokenization splits text into units called tokens. Depending on the
+tokenizer, tokens may be words, subwords, characters, or punctuation
+marks; tokenization affects how text is represented by a language model.
+
+Stemming reduces words to a rough root form by removing affixes,
+sometimes producing a form that is not a valid dictionary word. It is
+generally simpler and less linguistically precise than lemmatization.
+
+Lemmatization maps a word to a dictionary base form, or lemma, using
+linguistic information. For example, forms such as ‘am’, ‘are’, and ‘is’
+can be mapped to ‘be’ by a suitable lemmatizer.
+
+Stop words are common words that some text-processing pipelines remove,
+such as ‘the’ or ‘and’. Removing them is not always beneficial; in tasks
+involving meaning, phrases, or transformers, they may carry useful
+information.
+
+TF-IDF stands for term frequency-inverse document frequency. It weights
+terms based on how often they occur in a document and how distinctive
+they are across a collection, making it a useful sparse text
+representation for search and classification.
+
+Bag of words represents a document by word occurrence counts or
+frequencies while mostly ignoring word order. It is simple and useful
+for some tasks, but it cannot directly represent much of the context or
+meaning of a phrase.
+
+Semantic search retrieves content based on meaning rather than requiring
+exact keyword overlap. It commonly represents queries and documents as
+embeddings and ranks documents by a similarity measure.
+
+Sentence Transformers are models and tools for generating sentence or
+text embeddings suitable for tasks such as semantic similarity and
+semantic search. A common workflow embeds documents once and embeds each
+incoming query before comparing vectors.
+
+Cosine similarity measures the cosine of the angle between two vectors.
+For nonzero vectors, a larger value usually indicates a more similar
+direction, but the score is not a probability that a result is correct.
+
+In semantic search, a similarity score ranks how closely an embedded
+query aligns with a document embedding. The score should be evaluated
+empirically and should not be interpreted as a calibrated confidence
+percentage.
+
+A similarity threshold is a chosen minimum score for displaying a
+semantic-search result. A threshold that is too low can show irrelevant
+matches; one that is too high can hide useful matches. It should be
+tuned using representative test questions.
+
+Retrieval-augmented generation (RAG) combines information retrieval with
+a generative model. A retriever finds relevant source passages, and a
+language model uses those passages to formulate an answer; retrieval
+quality and source grounding both matter.
+
+A vector database stores and searches vector embeddings, often using
+approximate nearest-neighbor methods for scale. A small prototype can
+calculate similarities directly in memory without a separate vector
+database.
+
+Chunking divides long documents into smaller pieces for indexing and
+retrieval. Chunks that are too large may mix topics; chunks that are too
+small may lose context. Chunk size and overlap should be chosen based on
+the content and evaluation results.
+
+Question answering systems return answers to questions using stored
+knowledge, retrieved documents, a model, or a combination of these. A
+reliable system should indicate when its available sources do not
+support an answer.
+
+Hallucination in generative AI refers to output that sounds plausible
+but is false, unsupported, or inconsistent with the available evidence.
+Grounding answers in reliable sources and evaluating them can reduce,
+but not eliminate, this risk.
+
+Computer vision enables computers to interpret images and videos. Common
+tasks include image classification, object detection, semantic
+segmentation, instance segmentation, tracking, and image generation.
+
+Image classification assigns one or more labels to an entire image. It
+answers questions such as which object category is present, rather than
+locating every object in the image.
+
+Object detection identifies objects and predicts their locations,
+commonly with bounding boxes and class labels. It differs from image
+classification because it localizes individual objects within an image.
+
+Image segmentation assigns labels at the pixel level. Semantic
+segmentation labels pixels by category, while instance segmentation also
+distinguishes separate objects belonging to the same category.
+
+Object tracking links detected objects across successive video frames,
+assigning consistent identities over time. Tracking can be combined with
+object detection to estimate motion and count objects across video.
+
+Data visualization uses graphical representations such as histograms,
+scatter plots, and box plots to explore distributions, relationships,
+outliers, and patterns before or after modelling.
+
+Exploratory data analysis (EDA) examines data quality, distributions,
+relationships, missing values, class balance, and potential anomalies
+before modelling. EDA helps guide preprocessing and model choices.
+
+Correlation measures the strength and direction of an association
+between variables. Correlation alone does not establish causation, and a
+low linear correlation does not rule out nonlinear relationships.
+
+A confusion matrix compares predicted classes with actual classes. For
+binary classification, it counts true positives, true negatives, false
+positives, and false negatives.
+
+Accuracy is the proportion of all predictions that are correct. It can
+be misleading on imbalanced datasets; for example, a model that always
+predicts the majority class may have high accuracy while failing to
+detect the minority class.
+
+Precision is the proportion of predicted positive cases that are
+actually positive: true positives divided by true positives plus false
+positives. High precision means fewer false positive predictions among
+the positive predictions.
+
+Recall, also called sensitivity in binary classification, is the
+proportion of actual positive cases correctly identified: true positives
+divided by true positives plus false negatives. High recall means fewer
+actual positive cases are missed.
+
+The F1-score is the harmonic mean of precision and recall. It is useful
+when both false positives and false negatives matter, but it does not
+account for true negatives and may not fit every application.
+
+Specificity is the proportion of actual negative cases correctly
+identified: true negatives divided by true negatives plus false
+positives. It complements recall, which measures detection of actual
+positive cases.
+
+A ROC curve plots true positive rate against false positive rate across
+classification thresholds. ROC-AUC summarizes ranking discrimination,
+but precision-recall analysis can be more informative when positive
+cases are rare.
+
+A precision-recall curve shows the trade-off between precision and
+recall at different classification thresholds. Average precision or
+PR-AUC is often useful for imbalanced classification, although the exact
+summary definition should be stated.
+
+Mean absolute error (MAE) is the average absolute difference between
+predicted and actual numerical values. It is easy to interpret in the
+target’s units and is less sensitive to large errors than squared-error
+metrics.
+
+Mean squared error (MSE) is the average squared difference between
+predictions and actual values. Squaring penalizes large errors more
+heavily and gives the metric squared target units.
+
+Root mean squared error (RMSE) is the square root of mean squared error.
+It is expressed in the same units as the target and penalizes large
+errors more strongly than MAE.
+
+R-squared measures how much variation in the target is explained by a
+regression model relative to a baseline based on the target mean, under
+the metric’s standard definition. It can be negative on test data and
+does not prove causation or model validity.
+
+A model evaluation metric should match the task and the cost of errors.
+For example, recall may be especially important in some screening tasks,
+while precision may matter more when false alarms are expensive.
+
+A probability threshold converts predicted class probabilities into
+class labels. Lowering the threshold for the positive class often
+increases recall while reducing precision; the best threshold depends on
+the application’s error costs.
+
+Calibration describes whether predicted probabilities agree with
+observed outcome frequencies. A classifier can rank examples well while
+producing probabilities that are poorly calibrated.
+
+Reproducibility means that a workflow can be rerun with sufficiently
+consistent methods and results. Useful practices include recording
+package versions, setting random seeds where appropriate, documenting
+data sources, and saving evaluation procedures.
+
+A random seed initializes pseudorandom number generators so that certain
+randomized operations can be reproduced. It does not guarantee
+bit-for-bit identical results across all libraries, hardware, or
+software versions.
+
+A machine learning pipeline connects preprocessing and modelling steps
+into a repeatable workflow. Fitting transformations within the pipeline
+helps prevent data leakage between training and evaluation data.
+
+Model drift occurs when a model’s performance changes after deployment,
+often because input data, relationships, user behavior, or the
+environment changes. Monitoring and periodic evaluation can help detect
+drift.
+
+Data drift occurs when the distribution of model inputs changes over
+time. Data drift can be a warning sign, but it does not automatically
+mean model performance has declined; labels or outcome monitoring may
+also be needed.
+
+Concept drift occurs when the relationship between inputs and targets
+changes over time. For example, patterns of fraudulent transactions may
+change as fraudsters adapt their methods.
+
+Deployment makes a model or application available for use outside the
+development environment. Deployment may involve a web application, API,
+container, cloud service, or a scheduled batch process.
+
+An application programming interface (API) defines how software
+components communicate. A machine learning API might accept input data
+in a request and return a model prediction in a structured response.
+
+Streamlit is a Python framework for creating interactive data and
+machine learning applications. It can provide input controls, display
+predictions or search results, and run a prototype without building a
+separate frontend from scratch.
+
+Git is a version-control system that records changes to files over time.
+It helps developers review history, create branches, collaborate, and
+restore earlier versions of a project.
+
+GitHub hosts Git repositories and supports collaboration, issue
+tracking, documentation, and automation. A clear README, dependency
+list, tests, and usage instructions help others understand and reproduce
+a project.
+
+A requirements.txt file lists Python packages required by a project,
+commonly one package per line. Pinning tested versions can improve
+reproducibility, while unpinned requirements may install newer versions
+that could behave differently later.
+
+A virtual environment isolates a project’s Python packages from other
+projects and the system Python installation. Activating the correct
+environment helps ensure that commands use the intended dependencies.
+
+Unit tests check small pieces of software behavior automatically. For a
+semantic-search project, tests might check that notes load, empty notes
+are handled, and a representative question retrieves an expected
+relevant note.
+
+Pytest is a Python testing framework that discovers and runs tests. Test
+functions commonly use names beginning with ‘test_’ and assertions to
+check expected behavior.
+
+A README is the main project guide shown on many repository hosting
+pages. A useful README explains the goal, features, setup, usage, tests,
+limitations, example questions, and future improvements.
+
+Responsible AI involves developing and using AI systems with attention
+to safety, fairness, privacy, transparency, accountability, and
+potential effects on people. Appropriate practices depend on the context
+and risks of the application.
+
+Bias in machine learning can enter through data collection, historical
+patterns, labels, feature choices, measurement, and evaluation. Checking
+performance across relevant groups and examining data limitations can
+help reveal problems.
+
+Privacy in machine learning includes protecting personal or sensitive
+information in datasets, model inputs, logs, and outputs. Data
+minimization, access controls, secure storage, and appropriate consent
+or legal grounds are important safeguards.
+
+Explainability refers to methods that help people understand a model’s
+predictions or behavior. Simple models can be easier to interpret
+directly, while complex models may require feature attribution,
+examples, or other explanation methods that have limitations.
+
+A limitation of a semantic-search assistant is that it retrieves from
+the information it has been given. If the knowledge base does not
+contain an answer, the system may return weak matches or no result
+rather than provide a complete answer.
+
+A good retrieval evaluation set contains representative questions paired
+with expected relevant notes or source passages. Evaluating top-k
+retrieval, irrelevant-question rejection, and missed relevant results
+helps guide threshold and chunking choices.
+
+Precision at k measures how many of the top k retrieved results are
+relevant. Recall at k measures how many of the known relevant items
+appear within the top k results. These metrics can help evaluate search
+systems beyond inspecting a few examples manually.
+
+A false positive occurs when a model predicts a positive class for a
+negative example. A false negative occurs when a model predicts a
+negative class for a positive example. Which error is more costly
+depends on the application.
+
+A model card is a document that describes a machine learning model’s
+intended use, evaluation, limitations, and other relevant details. It
+helps users understand where the model may or may not be appropriate.
+
+An experiment log records the dataset version, preprocessing, model
+configuration, parameters, metrics, and observations for an experiment.
+Good experiment tracking makes comparisons more reliable and reduces
+accidental repetition.
+
+A simple AI study assistant using sentence embeddings and cosine
+similarity is a retrieval-based application, not a full generative
+chatbot. It finds existing notes that resemble a question and displays
+them rather than composing new explanations from a large language model.
+
+A knowledge base is a structured collection of information that an
+application can search or use to answer questions. In this project, each
+paragraph in the study-notes text file acts as an individual retrievable
+knowledge unit.
+
+Knowledge-base quality depends on accuracy, coverage, clarity, chunk
+boundaries, and maintenance. More text is not automatically better if it
+contains duplicates, contradictions, vague wording, or information
+unrelated to the application’s purpose.
+
+When a knowledge base changes, document embeddings should be regenerated
+so that the search index matches the current notes. Caching can speed up
+repeated use, but cached results should be invalidated or keyed by the
+updated content.
